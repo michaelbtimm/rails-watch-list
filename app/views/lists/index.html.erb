@@ -1,16 +1,19 @@
-<header>
-    <h1>WatchList Creator</h1>
-</header>
-<main>
-    <h2>Movie Lists</h2>
-  <ul class="list-cards">
-    <% @lists.each do |list| %>
-      <li>
-        <%= link_to list.name, list_path(list) %>
-      </li>
-    <% end %>
-    <li class="add-list">
-      <%= link_to 'add list', new_list_path %>
+<div class="card-category mb-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+url(https://images.unsplash.com/photo-1585647347384-2593bc35786b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)">
+<h1>Movie Lists</h1>
+</div>
+
+<div class="d-grid gap-2 mb-2">
+  <li class="btn btn-primary" type="button">
+    <%= link_to 'add list', new_list_path, class: 'btn btn-primary' %>
+  </li>
+</div>
+
+<ul class="list-group">
+  <% @lists.each do |list| %>
+    <li class="list-group-item" >
+      <%= link_to list.name, list_path(list) %>
     </li>
-  </ul>
-</main>
+  <% end %>
+
+</ul>

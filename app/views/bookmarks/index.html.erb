@@ -1,0 +1,9 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+url(https://images.unsplash.com/photo-1585647347384-2593bc35786b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)">
+<h1>Bookmarks</h1>
+</div>
+<% @bookmarks.each do |bookmark| %>
+  <ul>
+    <li><%= bookmark.comment %></li>
+  </ul>
+<% end %>
